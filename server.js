@@ -1,5 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
+const cors = require("cors")
+app.use(cors())
 
 // Import the connection object
 const sequelize = require('./config/connection');
