@@ -1,9 +1,12 @@
 [
   {
-    "text": "syntax of for loop"
+    "text": "syntax of for loop",
+    "level": 1,
+    "jumbledSolution": ["i++)", "(i=0;", "for", "i<10;"]
   },
   {
-    "text": "syntax of while loop"
+    "text": "syntax of while loop",
+    "level": 2,
+    "jumbledSolution": ["i", "10", "while", "<"]
   }
 ]
-  
