@@ -1,9 +1,12 @@
 [
   {
-    "text": "syntax of for loop"
+    "text": "Arrange the syntax of for loop",
+    "level": 1,
+    "solution": "for^(i=0;^i<10;^i++);"
   },
   {
-    "text": "syntax of while loop"
+    "text": "Arrange the syntax of while loop",
+    "level": 2,
+    "solution": "while^ (i^ <10^ )"
   }
 ]
-  

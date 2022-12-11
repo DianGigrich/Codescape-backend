@@ -16,6 +16,14 @@ Question.init(
     text: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    solution: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   },
   {
