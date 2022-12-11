@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 class User extends Model {}
 
 User.init(
@@ -18,14 +18,16 @@ User.init(
       password: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
       }
     },
     {
       sequelize,
+      hooks:{
+        beforeCreate:function(userObj){
+            userObj.password = bcrypt.hashSync(userObj.password, 5)
+            return userObj
+        }
+      },
       timestamps: false,
       freezeTableName: true,
       underscored: true,

@@ -17,8 +17,8 @@ Question.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    jumbledSolution: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+    solution: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     level: {
