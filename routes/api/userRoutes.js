@@ -100,7 +100,7 @@ router.get("/getuserfromtoken",(req,res) => {
 }
 return res.send(500);
 })
-https://us05web.zoom.us/j/2056933183?pwd=Q2o5eHhUc3NONmxRWk5GYnJoaDJCZz09
+
 // POST create a new user
 router.post("/", (req,res) => {
   User.create(req.body).then(newUser => {
