@@ -1,15 +1,15 @@
 [
-    {
-      "username": "Sal",
-      "password": "password12"
-    },
-    {
-      "username": "Lernantino",
-      "password": "password34"
-    },
-    {
-      "username": "Amiko",
-      "password": "password56"
-    }
+  {
+    "username": "Sal",
+    "password": "password12"
+  },
+  {
+    "username": "Lernantino",
+    "password": "password34"
+  },
+  {
+    "username": "Amiko",
+    "password": "password56"
+  }
 ]
   

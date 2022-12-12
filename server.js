@@ -1,14 +1,17 @@
 const express = require('express');
 const routes = require('./routes');
+const cors = require("cors")
+
 
 // Import the connection object
 const sequelize = require('./config/connection');
 
-const cors = require("cors")
+
 
 const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3001;
+const { User, Question, Puzzle, Highscore} = require('./models');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
