@@ -48,6 +48,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+
 // DELETE a user
 router.delete('/:id', async (req, res) => {
   try {
@@ -67,7 +68,6 @@ router.delete('/:id', async (req, res) => {
     });
 
 
-      
 // GET a user from Id
 router.get('/:id', async (req, res) => {
   try {
@@ -81,6 +81,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // GET a user from token
 router.get("/getuserfromtoken",(req,res) => {
@@ -101,6 +102,7 @@ router.get("/getuserfromtoken",(req,res) => {
 return res.send(500);
 })
 
+
 // POST create a new user
 router.post("/", (req,res) => {
   User.create(req.body).then(newUser => {
@@ -118,6 +120,7 @@ router.post("/", (req,res) => {
 })
 
 router.post("/login",(req,res) => {
+  console.log('login hit', req.body.username, req.body.username)
   User.findOne({
       where:{
         username:req.body.username
@@ -125,6 +128,7 @@ router.post("/login",(req,res) => {
   }).then(foundUser => {
       if (!foundUser) {
           return res.status(401).json({msg:"invalid login credentials"});
+
       } else if (!bcrypt.compareSync(req.body.password,foundUser.password)) {
           return res.status(401).json({msg:"invalid login credentials"});
       } else {
