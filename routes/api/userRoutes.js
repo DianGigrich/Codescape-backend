@@ -12,6 +12,17 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET a user from token
+router.get("/getuserfromtoken",(req,res) => {
+  try {
+      const token = req.headers.authorization.split(" ")[1];
+      const userData = jwt.verify(token, process.env.JWT_SECRET);
+      res.json({user:userData})
+  } catch (error) {
+      res.status(500).json({user:false})
+  }
+})
+
 // GET a user from Id
 router.get('/:id', async (req, res) => {
   try {
@@ -25,17 +36,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// GET a user from token
-router.get("/getuser/getuserfromtoken",(req,res) => {
-  try {
-      const token = req.headers.authorization.split(" ")[1];
-      const userData = jwt.verify(token, process.env.JWT_SECRET);
-      res.json({user:userData})
-  } catch (error) {
-      res.status(500).json({user:false})
-  }
-})
 
 // POST create a new user
 router.post("/", (req,res) => {
@@ -54,13 +54,14 @@ router.post("/", (req,res) => {
 })
 
 router.post("/login",(req,res) => {
+  console.log('login hit', req.body.username, req.body.username)
   User.findOne({
       where:{
         username:req.body.username
       }
   }).then(foundUser => {
       if (!foundUser) {
-          return res.status(401).json({msg:"invalid login credentials"})
+          return res.status(401).json({msg:"username not found"})
       } else if (!bcrypt.compareSync(req.body.password,foundUser.password)) {
           return res.status(401).json({msg:"invalid login credentials"})
       } else {
