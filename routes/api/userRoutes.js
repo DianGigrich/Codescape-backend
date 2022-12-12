@@ -16,19 +16,24 @@ router.get("/",(req,res)=>{
   })
 })
 
-//one user by id
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const userData = await User.findByPk(req.params.id);
-//     if(!userData) {
-//       res.status(404).json({message: 'No user found with this id.'});
-//       return;
-//     }
-//     res.status(200).json(userData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+// GET a user from token
+router.get("/getuserfromtoken",(req,res) => {
+  if (req.headers && req.headers.authorization) {
+    var authorization = req.headers.authorization.split(' ')[1],
+        decoded;
+    try {
+        decoded = jwt.verify(authorization, secret.secretToken);
+    } catch (e) {
+        return res.status(401).send('unauthorized');
+    }
+    var userId = decoded.id;
+    // Fetch the user by id 
+    User.findByPk(userId).then(function(user){
+        return res.send(200).json(user);
+    });
+}
+return res.send(500);
+})
 
 // UPDATE a user
 router.put('/:id', async (req, res) => {
@@ -83,24 +88,7 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// GET a user from token
-router.get("/getuserfromtoken",(req,res) => {
-  if (req.headers && req.headers.authorization) {
-    var authorization = req.headers.authorization.split(' ')[1],
-        decoded;
-    try {
-        decoded = jwt.verify(authorization, secret.secretToken);
-    } catch (e) {
-        return res.status(401).send('unauthorized');
-    }
-    var userId = decoded.id;
-    // Fetch the user by id 
-    User.findByPk(userId).then(function(user){
-        return res.send(200).json(user);
-    });
-}
-return res.send(500);
-})
+
 
 
 // POST create a new user
