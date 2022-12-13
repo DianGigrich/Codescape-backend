@@ -1,16 +1,16 @@
 [
   {
-    "text": "Arrange the syntax of for loop",
+    "text": "Arrange the syntax of the for loop",
     "level": 1,
     "solution": "for^(i=0;^i<10;^i++);"
   },
   {
-    "text": "Arrange the syntax of while loop",
+    "text": "Arrange the syntax of the while loop",
     "level": 1,
     "solution": "while^(i^ <10^ )"
   },
   {
-    "text": "How do you call a function named myFunction?",
+    "text": "How do you call a function named 'myFunction'?",
     "level": 1,
     "solution": "my^Function^(^) "
   },
@@ -27,125 +27,125 @@
   {
     "text": "How do you create a function in JavaScript?",
     "level": 1,
-    "solution": "function^my^function^() "
+    "solution": "function^my^function^(^) "
   },
   {
-    "text": "Arrange the given ollowing function of String object causes a string to be displayed in the specified color as if it were in a <font color='color'> tag?",
+    "text": "Arrange the given function of a String object that causes a string to be displayed in the specified color as if it were in a <font color='color'> tag?",
     "level": 1,
     "solution": "font^color^(^)"
   },
   {
-    "text": "Arrange the given built-in staement in correct order",
+    "text": "Arrange the given built-in statement in the correct order",
     "level": 1,
     "solution": "value^of^(^) "
   },
   {
-    "text": "Arrange the given built-in staement in correct order",
+    "text": "Arrange the given built-in statement in the correct order",
     "level": 1,
     "solution": "to^Exponential^(^) "
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 1,
     "solution": "Math^.random^(^) "
   },
   {
-    "text": "Arrange the given function in correct order",
+    "text": "Arrange the given function in the correct order",
     "level": 2,
     "solution": "while(x < 10)^{(x=x+1)^if(x==5)^{continue} }"
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 2,
     "solution": "document.^getElementbyId^(demo)^.innerHTML"
   },
   {
-    "text": "Arrange the given function in correct order",
+    "text": "Arrange the given function in the correct order",
     "level": 2,
     "solution": "while(x<20)^{if( x == 5)^{break}^x=x+1}"
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 2,
     "solution": "items^[Math.floor^(Math.random()^*items.length)]; "
   },
   {
-    "text": "Arrange the given staement in correct order for sorting the array",
+    "text": "Arrange the given statement in the correct order for sorting the array",
     "level": 2,
     "solution": "numbers^Array.^sort^(compareNumbers); "
   },
   {
-    "text": "Arrange the given funtion in correct order to make it work",
+    "text": "Arrange the given funtion in the correct order to make it work",
     "level": 2,
     "solution": "setTimeoout^(function()^ {alert^(Time to learn JavaScript.);}, 600000); "
   },
   {
-    "text": "Arrange the given funtion in correct order to make it work",
+    "text": "Arrange the given funtion in the correct order to make it work",
     "level": 2,
     "solution": "function sum(n)^{var tot=0; ^for (var i=0;i<=n;i++) ^tot=tot+i; alert(The sum of 0 through +n+ is +tot);} "
   },
   {
-    "text": "Arrange the given funtion in correct order to make it work",
+    "text": "Arrange the given funtion in the correct order to make it work",
     "level": 2,
-    "solution": "(function(a, b)^{const chuck = 42;^  return a + b + chuck;^});"
+    "solution": "(function(a, b)^{const chuck = 42;^ return a + b + chuck;^});"
   },
   {
-    "text": "Arrange the given arrow funtion in correct order to make it work",
+    "text": "Arrange the given arrow funtion in the correct order to make it work",
     "level": 2,
-    "solution": "(a, b)=>^{const num = 90;^  return a + b + num;^};"
+    "solution": "(a, b)=>^{const num = 90;^ return a + b + num;^};"
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 2,
     "solution": "element.^addEventListener^(click, ^myFunction);"  
   },
   {
-    "text": "Arrange the given  in correct order",
+    "text": "Arrange the given in the correct order",
     "level": 3,
     "solution": "varMyVar=global ^ functionCheckscope( )^{varMyVar=local ^ document.write(myVar)}"
   },
   {
-    "text": "Arrange the given  in correct order",
+    "text": "Arrange the given in the correct order",
     "level": 3,
     "solution": "window.^addEventListener(resize, function()^{document.^getElementById(demo).innerHTML = sometext;});"
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 3,
     "solution": "document.getElementById^(myDIV).^removeEventListener^(mousemove, myFunction);"  
   }, 
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 3,
     "solution": "<button^ id=demo>^Click me1^</button>"  
   }, 
   {
-    "text": "Arrange the given function in correct order",
+    "text": "Arrange the given function in the correct order",
     "level": 3,
     "solution": "if ^(x>y)^{ alert('Hello World')^;}"
   },
   {
-    "text": "Arrange the given function in correct order",
+    "text": "Arrange the given function in the correct order",
     "level": 3,
     "solution": "let ^i=0;^while(i<10)^{console.log(i);i++}"  
   },
   {
-    "text": "Arrange the given function in correct order",
+    "text": "Arrange the given function in the correct order",
     "level": 3,
     "solution": "const ^numbers=[89,30,40,60]; for^(x of numbers)^{console.log(x);}"  
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 3,
     "solution": "<button ^onclick=^alert('Hello')> ^Click me.</button>"  
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 3,
     "solution": "<div ^onmouseover= ^this.style.backgroundColor='red'>^myDIV.</div>"  
   },
   {
-    "text": "Arrange the given staement in correct order",
+    "text": "Arrange the given statement in the correct order",
     "level": 3,
     "solution": "const person =^ {firstName: 'John',lastName: 'Doe'};^alert^(person.firstName);"  
   }  
