@@ -1,11 +1,13 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Highscore } = require('../../models');
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 
 router.get('/', async (req, res) => {
   try {
-    const userData = await User.findAll();
+    const userData = await User.findAll({
+      include: [{ model: Highscore }]
+    });
     res.status(200).json(userData);
   } catch (err) {
     res.status(500).json(err);
@@ -15,7 +17,9 @@ router.get('/', async (req, res) => {
 // GET a user from Id
 router.get('/:id', async (req, res) => {
   try {
-    const userData = await User.findByPk(req.params.id);
+    const userData = await User.findByPk(req.params.id, {
+      include: [{ model: Highscore }]
+    });
     if (!userData) {
       res.status(404).json({ message: 'No user with this id!' });
       return;
@@ -77,5 +81,6 @@ router.post("/login",(req,res) => {
       }
   })
 })
+
 
 module.exports = router;
