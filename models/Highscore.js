@@ -5,13 +5,23 @@ class Highscore extends Model {}
 
 Highscore.init(
     {
-    highscoreno: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    }
-    
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      value: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+        },
+      }
   },
   {
     sequelize,
@@ -21,8 +31,5 @@ Highscore.init(
     modelName: 'highscore'
   }
 );
-
-
-
 
 module.exports = Highscore;
