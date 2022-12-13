@@ -5,7 +5,9 @@ const { Highscore, User } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const highscoreData = await Highscore.findAll({
-      include: [{ model: User }]
+      include: [{  model: User }],
+      limit: 10 ,
+    order: 'follower DESC'
     });
     res.status(200).json(highscoreData);
   } catch (err) {
