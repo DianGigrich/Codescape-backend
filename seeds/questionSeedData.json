@@ -77,12 +77,12 @@
   {
     "text": "Arrange the given funtion in the correct order to make it work",
     "level": 2,
-    "solution": "setTimeoout^(function()^ {alert^(Time to learn JavaScript.);}, 600000); "
+    "solution": "setTimeoout^(function()^ {alert^(Time to learn JavaScript.)^;}, 600000); "
   },
   {
     "text": "Arrange the given funtion in the correct order to make it work",
     "level": 2,
-    "solution": "function sum(n)^{var tot=0; ^for (var i=0;i<=n;i++) ^tot=tot+i; alert(The sum of 0 through +n+ is +tot);} "
+    "solution": "function sum(n)^{var tot=0; ^for (var i=0;i<=n;i++) ^tot=tot+i; alert^(The sum of 0 through +n+ is +tot);} "
   },
   {
     "text": "Arrange the given funtion in the correct order to make it work",
@@ -107,12 +107,12 @@
   {
     "text": "Arrange the given in the correct order",
     "level": 3,
-    "solution": "window.^addEventListener(resize, function()^{document.^getElementById(demo).innerHTML = sometext;});"
+    "solution": "window.^addEventListener(resize, function()^{document.^getElementById(demo).innerHTML = ^sometext;});"
   },
   {
     "text": "Arrange the given statement in the correct order",
     "level": 3,
-    "solution": "document.getElementById^(myDIV).^removeEventListener^(mousemove, myFunction);"  
+    "solution": "document.getElementById^(myDIV).^removeEventListener^(mousemove, ^myFunction);"  
   }, 
   {
     "text": "Arrange the given statement in the correct order",
@@ -122,12 +122,12 @@
   {
     "text": "Arrange the given function in the correct order",
     "level": 3,
-    "solution": "if ^(x>y)^{ alert('Hello World')^;}"
+    "solution": "if ^(x>y)^{ alert^('Hello World')^;}"
   },
   {
     "text": "Arrange the given function in the correct order",
     "level": 3,
-    "solution": "let ^i=0;^while(i<10)^{console.log(i);i++}"  
+    "solution": "let ^i=0;^while(i<10)^{console.log^(i);i++}"  
   },
   {
     "text": "Arrange the given function in the correct order",
@@ -137,17 +137,17 @@
   {
     "text": "Arrange the given statement in the correct order",
     "level": 3,
-    "solution": "<button ^onclick=^alert('Hello')> ^Click me.</button>"  
+    "solution": "<button ^onclick=^alert('Hello')> ^Click me.^</button>"  
   },
   {
     "text": "Arrange the given statement in the correct order",
     "level": 3,
-    "solution": "<div ^onmouseover= ^this.style.backgroundColor='red'>^myDIV.</div>"  
+    "solution": "<div ^onmouseover= ^this.style.^backgroundColor='red'>^myDIV.</div>"  
   },
   {
     "text": "Arrange the given statement in the correct order",
     "level": 3,
-    "solution": "const person =^ {firstName: 'John',lastName: 'Doe'};^alert^(person.firstName);"  
+    "solution": "const person =^ {firstName: 'John',^lastName: 'Doe'};^alert^(person.firstName);"  
   }  
 
 ]
