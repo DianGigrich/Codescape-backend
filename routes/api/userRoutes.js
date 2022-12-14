@@ -90,7 +90,8 @@ router.post("/", (req, res) => {
   User.create(req.body).then(newUser => {
     const token = jwt.sign({
       id: newUser.id,
-      username: newUser.username
+      username: newUser.username,
+      email: newUser.email
     }, process.env.JWT_SECRET, {
       expiresIn: "2h"
     });
@@ -102,21 +103,19 @@ router.post("/", (req, res) => {
 })
 
 router.post("/login", (req, res) => {
-  console.log('login hit', req.body.username, req.body.username)
   User.findOne({
     where: {
-      username: req.body.username
+      email: req.body.email
     }
   }).then(foundUser => {
     if (!foundUser) {
       return res.status(401).json({ msg: "invalid login credentials" });
-
     } else if (!bcrypt.compareSync(req.body.password, foundUser.password)) {
       return res.status(401).json({ msg: "invalid login credentials" });
     } else {
       const token = jwt.sign({
         id: foundUser.id,
-        username: foundUser.username
+        email: foundUser.email
       }, process.env.JWT_SECRET, {
         expiresIn: "2h"
       });
