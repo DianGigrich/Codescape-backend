@@ -18,7 +18,7 @@ const seedDatabase = async () => {
   for (const { id } of users) {
     const newHighScore = await Highscore.create({
       user_id: id,
-      value: 5
+      value: 5,
     });
   }
 

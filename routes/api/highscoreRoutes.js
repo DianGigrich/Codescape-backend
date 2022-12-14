@@ -5,9 +5,11 @@ const { Highscore, User } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const highscoreData = await Highscore.findAll({
-      include: [{  model: User }],
-      limit: 10 ,
-    order: 'follower DESC'
+      include: [{ model: User }],
+ 
+    }, {
+           limit: 10,
+      order: 'follower DESC'
     });
     res.status(200).json(highscoreData);
   } catch (err) {
@@ -17,9 +19,9 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-      const highscore = await Highscore.create({
-        value: req.body.value,
-        user_id: req.body.user_id
+    const highscore = await Highscore.create({
+      value: req.body.value,
+      user_id: req.body.user_id
     });
     res.status(200).json(highscore);
   } catch (err) {
@@ -29,7 +31,7 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-      const highscore = await Highscore.update(req.body, {
+    const highscore = await Highscore.update(req.body, {
       where: {
         id: req.params.id,
       },
