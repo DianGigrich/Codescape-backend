@@ -1,15 +1,18 @@
 [
-    {
-      "username": "Sal",
-      "password": "password12345"
-    },
-    {
-      "username": "Lernantino",
-      "password": "password12345"
-    },
-    {
-      "username": "Amiko",
-      "password": "password12345"
-    }
+  {
+    "username": "Sal",
+    "email": "sal@sal.com",
+    "password": "password12"
+  },
+  {
+    "username": "Lernantino",
+    "email": "learny@learny.com",
+    "password": "password34"
+  },
+  {
+    "username": "Amiko",
+    "email": "ami@ami.com",
+    "password": "password56"
+  }
 ]
   
